@@ -1,4 +1,4 @@
-#  Integer to array conversion
+#  Power calculations
 
 Goal: Calculate any number to the power of an integer.
 For performance, we will be using recursion.
