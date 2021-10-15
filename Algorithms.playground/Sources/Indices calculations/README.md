@@ -63,7 +63,8 @@ public func toThePower(number: Float, power: Int) -> Float {
         //End recursion
         guard power > 1 else {return number}
         if(power%2 == 0) {
-            return toThePower(number: number, power: power/2) * toThePower(number: number, power: power/2)
+            let value = toThePower(number: number, power: power/2)
+            return value * value
         } else {
             return toThePower(number: number, power: (power - 1)) * number
         }
@@ -72,7 +73,8 @@ public func toThePower(number: Float, power: Int) -> Float {
             guard power < -1 else {return 1/number}
             
             if(power%(-2) == 0) {
-                return toThePower(number: number, power: power/2) * toThePower(number: number, power: power/2)
+            let value = toThePower(number: number, power: power/2)
+            return value * value
             } else {
                 return toThePower(number: number, power: (power - 1)) * number
             }
@@ -82,4 +84,6 @@ public func toThePower(number: Float, power: Int) -> Float {
     }
 }
 ```
-This algorithm results in a runtime of O(logN) where N is the power. This is much faster than the trivial method of calculating powers.
+Take note of the use of the 'value' constant. This allows us to calculate the recursion once then perform a simple multiplication of it rather than performing two recursions to arrive at the same answer extending the amount of time needed.
+
+This recursive algorithm results in a runtime of O(logN) where N is the power. This is much faster than the trivial method of calculating powers.
