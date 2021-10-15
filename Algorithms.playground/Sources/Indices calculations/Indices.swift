@@ -4,7 +4,6 @@ public func toThePower(number: Float, power: Int) -> Float {
     if(power >= 1) {
         //End recursion
         guard power > 1 else {return number}
-        
         if(power%2 == 0) {
             return toThePower(number: number, power: power/2) * toThePower(number: number, power: power/2)
         } else {
@@ -23,5 +22,4 @@ public func toThePower(number: Float, power: Int) -> Float {
         //Power equals 0
             return 1
     }
-    
 }
