@@ -29,8 +29,7 @@ This algorithm is easy to understand but is slow for large data sets. This is du
 
 ```swift
     public func toThePower(number: Float, power: Int) -> Float {
-    if(power 0= 1) {
-        //Power equals 0
+    if(power == 0) {
             return 1
     }
 }
