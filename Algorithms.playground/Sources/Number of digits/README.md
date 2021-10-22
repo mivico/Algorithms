@@ -1,4 +1,4 @@
-#  Integer to array conversion
+#  Find how many digits
 
 Goal: Given an integer number, return the number of digits that integer contains.
 
