@@ -30,7 +30,9 @@ The idea behind this algorithm is simple, we work out the number of digits in th
 }
 ```
 
-At the bottom, we have an additional step for when the integer is negative. Without this step, every entry in the array would be negative. This would affect our ability to reverse the function:
+At the bottom, we have an additional step for when the integer is negative. Without this step, every entry in the array would be negative. This would affect our ability to reverse the function.
+
+The inverse is similar to the original function but in this case, we are adding each number multiplied by a power of 10:
 
 ```swift
 public func arrayToInt(_ array: [Int]) -> Int {
@@ -54,4 +56,3 @@ public func arrayToInt(_ array: [Int]) -> Int {
 }
 ```
 
-The inverse is similar to the original function but in this case, we are adding each number multiplied by a power of 10.
