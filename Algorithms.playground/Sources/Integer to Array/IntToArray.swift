@@ -6,7 +6,7 @@ public func intToArray(_ input: Int) -> [Int] {
     let digits = numberOfDigits(input)
     var previous = 0
     for index in 0..<digits {
-        let divFactor = Int(toThePower(number: 10, power: digits - index - 1))
+        let divFactor = Int(10^(digits - index - 1))
         copy = copy - previous
         let divided = Int(copy/divFactor)
         result.append(copy/divFactor)
@@ -24,12 +24,12 @@ public func arrayToInt(_ array: [Int]) -> Int {
     var result = 0
     if(array[0] > 0) {
         for index in 0..<array.count {
-        let multFactor = toThePower(number: 10, power: array.count - index - 1)
+        let multFactor = 10^(array.count - index - 1)
             result = result + array[index] * Int(multFactor)
         }
     } else {
         for index in 0..<array.count {
-        let multFactor = toThePower(number: 10, power: array.count - index - 1)
+        let multFactor = 10^(array.count - index - 1)
             if(index == 0) {
             result = result + array[index] * Int(multFactor)
             } else {
